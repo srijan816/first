@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-scroll';
+import { Link as ScrollLink } from 'react-scroll';
+import { Link as RouterLink } from 'react-router-dom';
 import './Header.css';
 
 const Header = () => {
@@ -33,19 +34,22 @@ const Header = () => {
         <nav className="nav-menu">
           <ul>
             <li>
-              <Link to="product" smooth={true} duration={500} offset={-70}>Products</Link>
+              <RouterLink to="/blog">Blog</RouterLink>
             </li>
             <li>
-              <Link to="tech" smooth={true} duration={500} offset={-70}>Technology</Link>
+              <ScrollLink to="product" smooth={true} duration={500} offset={-70}>Products</ScrollLink>
             </li>
             <li>
-              <Link to="about" smooth={true} duration={500} offset={-70}>About Us</Link>
+              <ScrollLink to="tech" smooth={true} duration={500} offset={-70}>Technology</ScrollLink>
             </li>
             <li>
-              <Link to="pricing" smooth={true} duration={500} offset={-70}>Pricing</Link>
+              <ScrollLink to="about" smooth={true} duration={500} offset={-70}>About Us</ScrollLink>
             </li>
             <li>
-              <Link to="contact" smooth={true} duration={500} offset={-70}>Contact</Link>
+              <ScrollLink to="pricing" smooth={true} duration={500} offset={-70}>Pricing</ScrollLink>
+            </li>
+            <li>
+              <ScrollLink to="contact" smooth={true} duration={500} offset={-70}>Contact</ScrollLink>
             </li>
           </ul>
         </nav>
